@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "583350269095",
+    "firebase_url": "https://tods-c3b6c-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "tods-c3b6c",
+    "storage_bucket": "tods-c3b6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583350269095:android:f3323f710eda898be95782",
+        "android_client_info": {
+          "package_name": "com.giorgiolupo.theodds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583350269095-me06qn0aql1sngefpuspt6t32fdf9cj0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXQ87Xzm1837Z1dl3FajANpc9rOLHB4kc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583350269095-me06qn0aql1sngefpuspt6t32fdf9cj0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

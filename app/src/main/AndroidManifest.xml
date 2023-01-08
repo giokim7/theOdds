@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.giorgiolupo.theodds">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TheOdds">
+        <activity
+            android:name="com.giorgiolupo.theodds.NewRecyclerScreen"
+            android:exported="true" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name="com.giorgiolupo.theodds.AllDares" />
+        <activity android:name="com.giorgiolupo.theodds.AllDaresSexy" />
+        <activity android:name="com.giorgiolupo.theodds.OnlineMode" />
+        <activity android:name="com.giorgiolupo.theodds.ChallengeToSendBack" />
+        <activity
+            android:name="com.giorgiolupo.theodds.WrongResult"
+            android:noHistory="true" />
+        <activity
+            android:name="com.giorgiolupo.theodds.CorrectResult"
+            android:noHistory="true" />
+        <activity android:name="com.giorgiolupo.theodds.Reverse" />
+        <activity android:name="com.giorgiolupo.theodds.ReverseToSendBack" />
+        <activity android:name="com.giorgiolupo.theodds.UploadVideo" />
+        <activity android:name="com.giorgiolupo.theodds.ExoPlayer" />
+        <activity android:name="com.giorgiolupo.theodds.FinishChallenge" />
+
+        <!--
+        after send challenge, return to home screen (step 1)
+        write instructions
+        make fields compulsory (like name)
+
+                    Toast.makeText(getApplicationContext(),,Toast.LENGTH_SHORT).show();
+        -->
+        <activity android:name="com.giorgiolupo.theodds.start">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="giorgiolupo.page.link"
+                    android:pathPrefix="/H3Ed/?id="
+                    android:scheme="https" />
+                <data
+                    android:host="giorgiolupo.page.link"
+                    android:pathPrefix="/H3Ed/?id="
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.giorgiolupo.theodds.ChallengeReceived">
+          <!--  <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="giorgiolupo.page.link"
+                    android:pathPrefix="/H3Ed/?id="
+                    android:scheme="https" />
+                <data
+                    android:host="giorgiolupo.page.link"
+                    android:pathPrefix="/H3Ed/?id="
+                    android:scheme="http" />
+            </intent-filter> -->
+        </activity>
+    </application>
+
+</manifest>
